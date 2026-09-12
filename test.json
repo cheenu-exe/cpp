@@ -1,7 +1,6 @@
 {
-  "status": "ok",
-  "message": "JSON fetch works",
+  "language": "cpp",
+  "filename": "main.cpp",
   "version": "1.0",
-  "owner": "cheenu",
-  "value": 12345
+  "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int n;\n    cin >> n;\n\n    vector<int> arr(n);\n    for (int i = 0; i < n; i++) {\n        cin >> arr[i];\n    }\n\n    sort(arr.begin(), arr.end());\n\n    cout << \"Sorted array: \";\n    for (int x : arr) {\n        cout << x << \" \";\n    }\n    cout << endl;\n\n    int sum = 0;\n    for (int x : arr) {\n        sum += x;\n    }\n\n    cout << \"Sum: \" << sum << endl;\n    cout << \"Minimum: \" << arr.front() << endl;\n    cout << \"Maximum: \" << arr.back() << endl;\n\n    double average = (double)sum / n;\n    cout << \"Average: \" << average << endl;\n\n    return 0;\n}\n"
 }
